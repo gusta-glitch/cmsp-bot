@@ -1,3 +1,7 @@
+#!/bin/python
+
+# Import libraries
+
 import random
 import time
 
@@ -8,22 +12,26 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 # import argparse
 
+# Set up the driver
+
 driver = webdriver.Chrome()
 
 driver.get("https://cmspweb.ip.tv/")
 
+# Set functions
+
 def login(ra, uf, password):
-	driver.find_element(By.ID,"access-student").click() # Click on the "Student" button
+	driver.find_element(By.ID, "access-student").click() # Click on the "Student" button
 
-	driver.find_element(By.ID,"ra-student").send_keys(ra[slice(0, -1)]) # Enter the student's RA
-	driver.find_element(By.ID,"digit-student").send_keys(ra[slice(-1, -2, -1)]) # Enter the student's digit
+	driver.find_element(By.ID, "ra-student").send_keys(ra[slice(0, -1)]) # Enter the student's RA
+	driver.find_element(By.ID, "digit-student").send_keys(ra[slice(-1, -2, -1)]) # Enter the student's digit
 
-	uf_stdent = driver.find_element(By.ID,"uf-student") # Select the student's UF
+	uf_stdent = driver.find_element(By.ID, "uf-student") # Select the student's UF
 	Select(uf_stdent).select_by_value(uf) # Select the student's UF
 
-	driver.find_element(By.ID,"password-student").send_keys(password) # Enter the student's password
+	driver.find_element(By.ID, "password-student").send_keys(password) # Enter the student's password
 
-	driver.find_element(By.ID,"btn-login-student").click() # Click on the "Login" button
+	driver.find_element(By.ID, "btn-login-student").click() # Click on the "Login" button
 
 def navigate(team):
 	driver.implicitly_wait(1000 * 1) # Wait 1 second
@@ -69,6 +77,8 @@ def fill():
 		tasks = WebDriverWait(driver, 900).until(lambda driver: driver.find_elements(By.XPATH, "//*[@id='root']/div/div[1]/main/div[1]/div/table/tbody/tr")) # Await load and get the tasks
 
 		print(int(len(tasks) / 2), "tasks found") # Print the number of tasks found
+
+# Run the script
 
 login("1082438340", "sp", "ju5lm9kw") # Login
 
