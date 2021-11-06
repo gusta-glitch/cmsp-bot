@@ -8,7 +8,7 @@ Script de resposta automatica para Centro de Mídias de São Paulo, escrito em P
 
 - [ ] Ler parametros do CLI
 - [x] Login automatico
-- [ ] Logou automatico
+- [ ] Logout automatico
 - [x] Navegação até a lista de tarefas
 - [x] Resposta automatica (aleatória)
 - [ ] Resposta correta
@@ -36,6 +36,6 @@ Script de resposta automatica para Centro de Mídias de São Paulo, escrito em P
 
 ### Instalar dependencias
 
-Para instalar **pipenv** `pip install pipenv`.
+Instale o **pipenv** com `pip install pipenv`.
 
 Com **pipenv** instalado, instale as dependencias do projeto com `pipenv install` e entre no ambiente virtual com `pipenv shell`.
