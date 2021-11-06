@@ -11,9 +11,14 @@ Script de resposta automatica para Centro de Mídias de São Paulo, escrito em P
 - [ ] Logout automatico
 - [x] Navegação até a lista de tarefas
 - [x] Resposta automatica (aleatória)
+  - [ ] checkbox
+  - [x] radio
+  - [ ] text
 - [ ] Resposta correta
-- [ ] Lista de usuários (pagantes)
+- [ ] Lista de usuários
 - [ ] Binário
+  - [ ] Linux
+  - [ ] Windows
 
 **Sistemas operacionais**
 
