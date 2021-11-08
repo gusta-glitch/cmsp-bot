@@ -6,11 +6,11 @@ Script de resposta automatica para Centro de Mídias de São Paulo, escrito em P
 
 **Recursos**
 
-- [x] Ler parametros do CLI
-- [x] Login automatico
-- [x] Logout automatico
+- [x] Ler parâmetros do CLI
+- [x] Login automático
+- [x] Logout automático
 - [x] Navegação até a lista de tarefas
-- [x] Resposta automatica (aleatória)
+- [x] Resposta automática (aleatória)
   - [ ] checkbox
   - [x] radio
   - [ ] text
@@ -43,7 +43,7 @@ Para usar o _binário_ digite `cmsp-bot [ARGUMENTOS]` no terminal
 | --------------------------------- | ------------------------------------ | -------------------------------- |
 | `-h`, `--help` : `[Bool]`         | Mostra o menu de ajuda e sai         | `-h`                             |
 | `-V`, `--version` : `[Bool]`      | Mostra a versão do programa e sai    | `-V`                             |
-| `-u`, `--ra` : `[Str \| Int]`     | RA do usuario, com digito            | `-u 123456789-0`                 |
+| `-u`, `--ra` : `[Str \| Int]`     | RA do usuario, com dígito            | `-u 123456789-0`                 |
 | `-c`, `--uf` : `[Str]`            | UF do ususario                       | `-c sp`                          |
 | `-p`, `--password` : `[Str]`      | Código de acesso do usuário          | `-p a1b2c3b4`                    |
 | `-t`, `--team` : `[Str]`          | Classe onde se encontra as tarefas   | `-t "[CLASSE] Turma 1°A Escola"` |
@@ -51,7 +51,7 @@ Para usar o _binário_ digite `cmsp-bot [ARGUMENTOS]` no terminal
 
 ## Desenvolvimento
 
-**Dependencias**
+**Dependências**
 
 | Dependencias locais | Função              |
 | ------------------: | :------------------ |
@@ -62,7 +62,7 @@ Para usar o _binário_ digite `cmsp-bot [ARGUMENTOS]` no terminal
 | ----------------------: | :------------------ |
 |                selenium | Acessar o navegador |
 
-Verifiique se está na pasta de desenvovimento com o comando `pwd`, se o ultimo diretório for **/cmsp-bot** prosiga.
+Verifiique se está na pasta de desenvolvimento com o comando `pwd`, se o ultimo diretório for **/cmsp-bot** prosiga.
 
 ### No Linux
 
@@ -74,7 +74,7 @@ Entre no ambiente virtual com `source cmsp/bin/activate`.
 
 #### Instalar dependências do projeto
 
-Apos dentro do ambiente virtual, instale as dependência do python com `pip install -r requirements.txt`.
+Apos dentro do ambiente virtual, instale as dependências do python com `pip install -r requirements.txt`.
 
 #### Gerar binário
 
