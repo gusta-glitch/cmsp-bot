@@ -43,8 +43,8 @@ Para usar o _binário_ digite `cmsp-bot [ARGUMENTOS]` no terminal
 | --------------------------------- | ------------------------------------ | -------------------------------- |
 | `-h`, `--help` : `[Bool]`         | Mostra o menu de ajuda e sai         | `-h`                             |
 | `-V`, `--version` : `[Bool]`      | Mostra a versão do programa e sai    | `-V`                             |
-| `-u`, `--ra` : `[Str \| Int]`     | RA do usuario, com dígito            | `-u 123456789-0`                 |
-| `-c`, `--uf` : `[Str]`            | UF do ususario                       | `-c sp`                          |
+| `-u`, `--ra` : `[Str \| Int]`     | RA do usuário, com dígito            | `-u 123456789-0`                 |
+| `-c`, `--uf` : `[Str]`            | UF do ususário                       | `-c sp`                          |
 | `-p`, `--password` : `[Str]`      | Código de acesso do usuário          | `-p a1b2c3b4`                    |
 | `-t`, `--team` : `[Str]`          | Classe onde se encontra as tarefas   | `-t "[CLASSE] Turma 1°A Escola"` |
 | `-a`, `--amount` : `[Int, "all"]` | Quantidade de tarefas para responder | `-a 50` ou `-a all`              |
@@ -53,7 +53,7 @@ Para usar o _binário_ digite `cmsp-bot [ARGUMENTOS]` no terminal
 
 **Dependências**
 
-| Dependencias locais | Função              |
+| Dependências locais | Função              |
 | ------------------: | :------------------ |
 |   chrome / chromuim | Navegador suportado |
 |         pyinstaller | Gerar binário       |
@@ -62,7 +62,7 @@ Para usar o _binário_ digite `cmsp-bot [ARGUMENTOS]` no terminal
 | ----------------------: | :------------------ |
 |                selenium | Acessar o navegador |
 
-Verifiique se está na pasta de desenvolvimento com o comando `pwd`, se o ultimo diretório for **/cmsp-bot** prosiga.
+Verifique se está na pasta de desenvolvimento com o comando `pwd`, se o ultimo diretório for **/cmsp-bot** prosiga.
 
 ### No Linux
 
