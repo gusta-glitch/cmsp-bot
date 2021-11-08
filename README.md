@@ -1,12 +1,14 @@
 # CMSP Bot
 
+---
+
 Script de resposta automatica para Centro de Mídias de São Paulo, escrito em Python
 
 **Recursos**
 
-- [x] Ler parametros do CLI
+- [ ] Ler parametros do CLI
 - [x] Login automatico
-- [x] Logout automatico
+- [ ] Logout automatico
 - [x] Navegação até a lista de tarefas
 - [x] Resposta automatica (aleatória)
   - [ ] checkbox
@@ -14,8 +16,8 @@ Script de resposta automatica para Centro de Mídias de São Paulo, escrito em P
   - [ ] text
 - [ ] Resposta correta
 - [ ] Lista de usuários
-- [x] Binário
-  - [x] Linux
+- [ ] Binário
+  - [ ] Linux
   - [ ] Windows
 
 **Sistemas operacionais**
@@ -29,29 +31,16 @@ Script de resposta automatica para Centro de Mídias de São Paulo, escrito em P
 
 **Dependencias**
 
-| Dependencias locais | Função              |
-| ------------------: | :------------------ |
-|   chrome / chromuim | Navegador suportado |
-|         pyinstaller | Gerar binário       |
+| Dependencias locais |
+| ------------------- |
+| pipenv              |
 
-| Dependencias do projeto | Função              |
-| ----------------------: | :------------------ |
-|                selenium | Acessar o navegador |
+| Dependencias do projeto |
+| ----------------------- |
+| selenium                |
 
-Verifiique se está na pasta de desenvovimento com o comando `pwd`, se o ultimo diretório for **/cmsp-bot** prosiga.
+### Instalar dependencias
 
-### No Linux
+Instale o **pipenv** com `pip install pipenv`.
 
-#### Ambiente virtual
-
-Crie um ambiente virtual com `python -m virtualenv cmsp --activators bash, powershell`.
-
-Entre no ambiente virtual com `source cmsp/bin/activate`.
-
-#### Instalar dependências do projeto
-
-Apos dentro do ambiente virtual, instale as dependência do python com `pip install -r requirements.txt`.
-
-#### Gerar binário
-
-Crie binários usando `pyinstaler --paths cmsp/lib/python*/site-packages -F ./main.py`.
+Com **pipenv** instalado, instale as dependencias do projeto com `pipenv install` e entre no ambiente virtual com `pipenv shell`.
