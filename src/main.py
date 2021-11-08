@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 # Import libraries
 
@@ -12,7 +13,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
 
-from __init__ import __version__
+from info import __version__
 
 # Set the arguments
 
@@ -76,7 +77,7 @@ def debug(type, message):
 
 # Set up the driver
 
-driver = webdriver.Chrome()
+driver = webdriver.Chrome() # Set the driver
 
 driver.get("https://cmspweb.ip.tv/") # Open the "CMSP" website
 
@@ -116,26 +117,27 @@ def navigate(team):
 
 	return driver.find_element(By.TAG_NAME, "iframe").get_attribute("src") # Get the "TaskList" iframe's src
 def fill(amount):
-	_amount = int(amount)
+	time.sleep(1) # Wait 1 secon
 
 	tasks = driver.execute_script("return document.querySelectorAll(\"#root > div > div.homeuser > main > div.scrollable.homeuser__body--my-tasks > div > table > tbody > tr.MuiTableRow-root.row\")") # Get the tasks
 	set_amount = 0 # Set the amount of tasks to fill
 	conclued = 0 # Set the amount of tasks completed
+	filled = 0 # Set the amount of tasks filled
 
 	if tasks: # If there are tasks
 		if amount == "all": # If the amount is "all"
 			set_amount = len(tasks)
-		elif _amount > 0 and _amount <= len(tasks): # If the amount is between 1 and the amount of tasks
-			set_amount = _amount
-		elif _amount > len(tasks): # If the amount is greater than the amount of tasks
+		elif int(amount) > 0 and int(amount) <= len(tasks): # If the amount is between 1 and the amount of tasks
+			set_amount = int(amount)
+		elif int(amount) > len(tasks): # If the amount is greater than the amount of tasks
 			set_amount = len(tasks)
 		else: # If the amount is invalid
 			debug("error", f"Invalid amount of tasks to fill: {amount}")
 			driver.close() # Close the driver
 
-		debug("info" ,f"Filling {amount} tasks of {tasks}")
+		debug("info" ,f"Filling {amount} tasks of {len(tasks)}")
 
-		for filled in range(0, set_amount):
+		for _ in range(0, set_amount):
 			for task in tasks:
 				task.click() # Click on the task
 
@@ -145,15 +147,17 @@ def fill(amount):
 				radio_group = WebDriverWait(driver, 900).until(lambda driver: driver.find_elements(By.XPATH, "//div[@role='radiogroup']"))
 
 				for input_radio in radio_group:
-					time.sleep(0.6) # Wait 600 milliseconds
 					input_radio.find_elements(By.TAG_NAME, "input")[random.randint(0, len(input_radio.find_elements(By.TAG_NAME, "input")) - 1)].click() # Click on a random radio button
-				driver.find_element(By.XPATH, "//*[@id='root']/div/div[1]/button[1]").click() # Click on the "Confirm" button
 
-			print(f"{filled} tasks are filled")
+					filled += 1 # Increase the amount of tasks filled
+
+					time.sleep(0.3) # Wait 3s00 milliseconds
+				driver.find_element(By.XPATH, "//*[@id='root']/div/div[1]/button[1]").click() # Click on the "Confirm" button
 			conclued += 1 # Increase the amount of tasks completed
+
+			time.sleep(0.6) # Wait 600 milliseconds
 	else:
-		debug("error", f"No tasks to fill")
-		driver.close() # Close the driver
+		debug("error", "No tasks to fill")
 
 	debug("success", f"{conclued} tasks are completed")
 

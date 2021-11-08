@@ -2,6 +2,6 @@
 list.json
 build
 dist
-main.spec
+cmsp-bot.spec
 cmsp
 __pycache__
