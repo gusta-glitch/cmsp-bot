@@ -2,7 +2,7 @@
 
 ![Logo](./assets/cmsp_bot-logo.png)
 
-Script de resposta automatica para Centro de Mídias de São Paulo, escrito em Python
+Script de resposta automática para Centro de Mídias de São Paulo, escrito em Python
 
 **Recursos**
 
@@ -44,7 +44,7 @@ Para usar o _binário_ digite `cmsp-bot [ARGUMENTOS]` no terminal
 | `-h`, `--help` : `[Bool]`         | Mostra o menu de ajuda e sai         | `-h`                             |
 | `-V`, `--version` : `[Bool]`      | Mostra a versão do programa e sai    | `-V`                             |
 | `-u`, `--ra` : `[Str \| Int]`     | RA do usuário, com dígito            | `-u 123456789-0`                 |
-| `-c`, `--uf` : `[Str]`            | UF do ususário                       | `-c sp`                          |
+| `-c`, `--uf` : `[Str]`            | UF do usuário                        | `-c sp`                          |
 | `-p`, `--password` : `[Str]`      | Código de acesso do usuário          | `-p a1b2c3b4`                    |
 | `-t`, `--team` : `[Str]`          | Classe onde se encontra as tarefas   | `-t "[CLASSE] Turma 1°A Escola"` |
 | `-a`, `--amount` : `[Int, "all"]` | Quantidade de tarefas para responder | `-a 50` ou `-a all`              |
@@ -58,7 +58,7 @@ Para usar o _binário_ digite `cmsp-bot [ARGUMENTOS]` no terminal
 |   chrome / chromuim | Navegador suportado |
 |         pyinstaller | Gerar binário       |
 
-| Dependencias do projeto | Função              |
+| Dependências do projeto | Função              |
 | ----------------------: | :------------------ |
 |                selenium | Acessar o navegador |
 
