@@ -1,2 +1,7 @@
 .env
 list.json
+build
+dist
+main.spec
+cmsp
+__pycache__
