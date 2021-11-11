@@ -30,7 +30,7 @@ parser_login.add_argument("-p", "--password", type=str, help="password of the st
 parser_login.add_argument("-t", "--team", type=str, help="team of the student")
 parser_login.add_argument("-a", "--amount", type=str, help="amount of tasks to fill", default="10")
 
-parser_login.add_argument("--list", "-l", type=str, help="list of user to fill tasks")
+parser_login.add_argument("--list", "-l", type=str, help="list of user to fill tasks [NOT WORKING]")
 
 parser_debug = parser.add_argument_group("Debug")
 
