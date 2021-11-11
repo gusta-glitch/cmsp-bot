@@ -27,6 +27,28 @@ Script de resposta automatica para Centro de Mídias de São Paulo, escrito em P
 
 ---
 
+## Uso
+
+### No Linux
+
+Para usar o script _python_ digite `python ./src/main.py [ARGUMENTOS]` no terminal.
+
+Para usar o _binário_ digite `cmsp-bot [ARGUMENTOS]` no terminal
+
+> O arquivo binário não tem dependências adicionais, alem do navegado suportado.
+
+### Lista de argumentos
+
+| Argumento                         | Descrição                            | Exemplo                          |
+| --------------------------------- | ------------------------------------ | -------------------------------- |
+| `-h`, `--help` : `[Bool]`         | Mostra o menu de ajuda e sai         | `-h`                             |
+| `-V`, `--version` : `[Bool]`      | Mostra a versão do programa e sai    | `-V`                             |
+| `-u`, `--ra` : `[Str \| Int]`     | RA do usuario, com digito            | `-u 123456789-0`                 |
+| `-c`, `--uf` : `[Str]`            | UF do ususario                       | `-c sp`                          |
+| `-p`, `--password` : `[Str]`      | Código de acesso do usuário          | `-p a1b2c3b4`                    |
+| `-t`, `--team` : `[Str]`          | Classe onde se encontra as tarefas   | `-t "[CLASSE] Turma 1°A Escola"` |
+| `-a`, `--amount` : `[Int, "all"]` | Quantidade de tarefas para responder | `-a 50` ou `-a all`              |
+
 ## Desenvolvimento
 
 **Dependencias**
@@ -56,4 +78,4 @@ Apos dentro do ambiente virtual, instale as dependência do python com `pip inst
 
 #### Gerar binário
 
-Crie binários usando `pyinstaler --paths cmsp/lib/python*/site-packages -F ./main.py`.
+Crie binários usando `pyinstaler --paths cmsp/lib/python*/site-packages -F ./src/main.py`.
