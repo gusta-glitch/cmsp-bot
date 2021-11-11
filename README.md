@@ -1,5 +1,7 @@
 # CMSP Bot
 
+![Logo](./assets/cmsp_bot-logo.png)
+
 Script de resposta automatica para Centro de Mídias de São Paulo, escrito em Python
 
 **Recursos**
