@@ -34,15 +34,15 @@ Para usar o _binário_ digite `cmsp-bot [ARGUMENTOS]` no terminal
 
 ### Lista de argumentos
 
-| Argumento                     | Descrição                            | Exemplo                                 |
-| ----------------------------- | ------------------------------------ | --------------------------------------- |
-| `-h`, `--help` : `[Bool]`     | Mostra o menu de ajuda e sai         | `-h`                                    |
-| `-V`, `--version` : `[Bool]`  | Mostra a versão do programa e sai    | `-V`                                    |
-| `-u`, `--ra` : `[Str, Int]`   | RA do usuário, com dígito            | `-u 123456789-0`                        |
-| `-c`, `--uf` : `[Str]`        | UF do usuário                        | `-c sp`                                 |
-| `-p`, `--password` : `[Str]`  | Código de acesso do usuário          | `-p a1b2c3b4`                           |
-| `-t`, `--team` : `[Str, Int]` | Classe onde se encontra as tarefas   | `-t "[CLASSE] Turma 1°A Escola"` ou     |
-| `-a`, `--amount` : `[Int]`    | Quantidade de tarefas para responder | `-a 50` ou `-a 0` para todas as tarefas |
+| Argumento                     | Descrição                            | Exemplo                                                       |
+| ----------------------------- | ------------------------------------ | ------------------------------------------------------------- |
+| `-h`, `--help` : `[Bool]`     | Mostra o menu de ajuda e sai         | `-h`                                                          |
+| `-V`, `--version` : `[Bool]`  | Mostra a versão do programa e sai    | `-V`                                                          |
+| `-u`, `--ra` : `[Str, Int]`   | RA do usuário, com dígito            | `-u 123456789-0`                                              |
+| `-c`, `--uf` : `[Str]`        | UF do usuário                        | `-c sp`                                                       |
+| `-p`, `--password` : `[Str]`  | Código de acesso do usuário          | `-p a1b2c3b4`                                                 |
+| `-t`, `--team` : `[Str, Int]` | Classe onde se encontra as tarefas   | `-t "[CLASSE] Turma 1°A Escola"` ou `-t 1` para primeira sala |
+| `-a`, `--amount` : `[Int]`    | Quantidade de tarefas para responder | `-a 50` ou `-a 0` para todas as tarefas                       |
 
 ## Desenvolvimento
 
